@@ -20,10 +20,10 @@ export default function Textform(props) {
   
   return (
     <>
-    <div className='container'>
+    <div className='container' style={{color: props.mode==='black'||'#198754'||'#061f45'?'white':'black',color:props.mode==='white'?'black':'white'}} >
         <h1>{props.heading} </h1>
         <div className='mb-2'>
-            <textarea className="form-control" value={text} onChange={handleonchange}  id="myBox" cols={8} rows={10}></textarea>
+            <textarea className="form-control" value={text} onChange={handleonchange}style={{backgroundColor:props.mode,color: props.mode==='black'||'#198754'||'#061f45'?'white':'black',color:props.mode==='white'?'black':'white'}}  id="myBox" cols={8} rows={10}></textarea>
         </div>
         <div className='d-grid gap-2 d-md-block'>
             <button type="button" className="btn btn-secondary mx-1" onClick={handleUpcase}>Convert to uppercase</button>
@@ -34,7 +34,7 @@ export default function Textform(props) {
         </div>
         
     </div>
-    <div className='container '>
+    <div className='container ' style={{color: props.mode==='black'||'#198754'||'#061f45'?'white':'black', color:props.mode==='white'?'black':'white'}}>
         <h2>Your Text Summary</h2>
         <p>Words : {text.split(" ").length -1} </p>
         <p>Characters : {text.length} </p>
